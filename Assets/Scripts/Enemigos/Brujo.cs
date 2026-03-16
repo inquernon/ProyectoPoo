@@ -5,7 +5,12 @@ public class Brujo : Enemigo, IInteractuable, IGuardable
     public Brujo(string nombre, int vida, int danio) : base(nombre, vida, danio)
     {
     }
-
+private void Awake()
+    {
+        nombre     = "Brujo Oscuro";
+        vida       = 50;
+        danio      = 10;
+    }
     public override void Atacar()
     {
         Debug.Log($"{Nombre} lanza un hechizo.");

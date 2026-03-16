@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 164842523}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9453661, y: -0.7204077, z: 0.0517293}
+  m_LocalPosition: {x: 0, y: -2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -166,7 +166,8 @@ MonoBehaviour:
   guerreroPrefab: {fileID: 4792220789107165679, guid: 8bc91bfc2e59cba48bc100120ea2feeb, type: 3}
   magoPrefab: {fileID: 4867135504685306064, guid: 3e22bcefe5acfec46a9d7cfec7183d51, type: 3}
   arqueroPrefab: {fileID: 700652536219512830, guid: 8d3912b733de1c243b878bb9995788fe, type: 3}
-  spawnPosition: {x: 0, y: 0, z: 0}
+  gestor: {fileID: 724224628}
+  spawnPosition: {x: 0, y: -3, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +389,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &724224627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 724224629}
+  - component: {fileID: 724224628}
+  m_Layer: 0
+  m_Name: GestorEnemigo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &724224628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724224627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f42ef04fb010174f8fe56037a3eded5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  esqueletoPrefab: {fileID: 6206636846282909217, guid: 79f21c4764cbc234384b3a6b08080754, type: 3}
+  brujoPrefab: {fileID: 807292217714353156, guid: f7c1a3b4d35a0744d8689d52f5c6ae97, type: 3}
+  bossPrefab: {fileID: 1439410063097367418, guid: c37687432b23da04eae5b4b66b02c274, type: 3}
+  enemigosPorOleada: 5
+  tiempoEntreOleadas: 2
+  tiempoEntreEnemigos: 3
+--- !u!4 &724224629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724224627}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.9453661, y: -0.7204077, z: 0.0517293}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1717300461
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,3 +628,4 @@ SceneRoots:
   - {fileID: 164842524}
   - {fileID: 1717300465}
   - {fileID: 1839197373}
+  - {fileID: 724224629}

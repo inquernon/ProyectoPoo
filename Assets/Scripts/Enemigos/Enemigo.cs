@@ -6,12 +6,16 @@ public abstract class Enemigo : MonoBehaviour, IDaniable
     protected string nombre;
     protected int vida;
     protected int danio;
+    private GestorEnemigos gestor;
 
     public Enemigo(string nombre, int vida, int danio)
     {
         this.Nombre = nombre;
         this.Vida = vida;
         this.Danio = danio;
+    }
+    void Awake() {
+        gestor = FindObjectOfType<GestorEnemigos>();
     }
     public string Nombre { get => nombre; set => nombre = value; }
     public int Vida { get => vida; set => vida = Mathf.Clamp(value, 0, 100); }
@@ -38,6 +42,7 @@ public abstract class Enemigo : MonoBehaviour, IDaniable
     public virtual void Morir()
     {
         Debug.Log($"{Nombre} ha muerto.");
-        // Aquí podrías agregar lógica adicional, como reproducir una animación de muerte o eliminar el objeto del juego
+        gestor?.NotificarMuerte(this);
+        Destroy(gameObject);
     }
 }

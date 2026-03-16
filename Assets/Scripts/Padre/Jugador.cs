@@ -9,9 +9,8 @@ public class Jugador : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
-    void Start() {
-        Debug.Log(nombre + " ha sido seleccionado");
-    }
+    public int Vida { get => vida; set => vida = Mathf.Clamp(value, 0, 100); }
+    public int Danio { get => danio; set => danio = value > 0 ? value : 5; }
 
     public virtual void Atacar()
     {
